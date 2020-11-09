@@ -33,6 +33,21 @@ count=0
 
 for result in ${results[@]}; do
 	array_results[$count]=$result
-	count+=1 ; done
+	((count+=1)) ; done
 
-#echo ${array_results[@]}
+echo Array before Sorting : ${array_results[@]}
+
+for index1 in `seq 0 $((${#array_results[@]}-1))` ; do
+	for index2 in `seq 0 $((${#array_results[@]}-1))` ; do
+		if [ $((${array_results[$index1]})) -gt $((${array_results[$index2]})) ] ; then
+			temp=${array_results[$index1]}
+			array_results[$index1]=${array_results[$index2]}
+			array_results[$index2]=$temp
+		fi
+	done
+done
+
+echo Array after Sorting : ${array_results[@]}
+
+
+
