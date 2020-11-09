@@ -17,5 +17,9 @@ solution3=$(($number3+$(($number1/$number2))))
 problem3='c + a / b = '
 echo "$problem3$solution3"
 
+solution4=$(($number3+$(($number1%$number2))))
+problem4='a % b + c = '
+echo "$problem4$solution4"
+
 
 
