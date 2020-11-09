@@ -28,6 +28,11 @@ results[problem2]=$solution2
 results[problem3]=$solution3
 results[problem4]=$solution4
 
+declare -a array_results
+count=0
 
-#for key in ${!results[@]}; do
-#	echo $key = ${results[$key]} ; done
+for result in ${results[@]}; do
+	array_results[$count]=$result
+	count+=1 ; done
+
+#echo ${array_results[@]}
