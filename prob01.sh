@@ -9,3 +9,8 @@ solution1=$(($number1+$(($number2*$number3))))
 problem1='a + b * c = '
 echo "$problem1$solution1"
 
+solution2=$(($number3+$(($number1*$number2))))
+problem2='a * b + c = '
+echo "$problem2$solution2"
+
+
