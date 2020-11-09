@@ -37,9 +37,11 @@ for result in ${results[@]}; do
 
 echo Array before Sorting : ${array_results[@]}
 
+#Sorting the Arrays
+
 for index1 in `seq 0 $((${#array_results[@]}-1))` ; do
 	for index2 in `seq 0 $((${#array_results[@]}-1))` ; do
-		if [ $((${array_results[$index1]})) -gt $((${array_results[$index2]})) ] ; then
+		if [ $((${array_results[$index1]})) -lt $((${array_results[$index2]})) ] ; then
 			temp=${array_results[$index1]}
 			array_results[$index1]=${array_results[$index2]}
 			array_results[$index2]=$temp
